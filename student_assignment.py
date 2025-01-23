@@ -10,11 +10,8 @@ def hw02_1(q1_pdf):
     loader = PyPDFLoader(q1_pdf)
     documents = loader.load()
     splitter = CharacterTextSplitter(chunk_overlap = 0)
-    for i, doc in enumerate(documents):
-        chunks = splitter.split_text(doc.page_content)
-        for j, chunk in enumerate(chunks):
-            last_chunk_info = chunk
-    return last_chunk_info
+    chunks = splitter.split_documents(documents)
+    return chunks[-1]
 
 def hw02_2(q2_pdf):
     pass
