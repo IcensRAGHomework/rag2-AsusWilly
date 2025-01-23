@@ -19,9 +19,7 @@ def hw02_1(q1_pdf):
                 'page': page_number,
                 'content': chunk
             }
-    print(f"Filename: {last_chunk_info['filename']}")
-    print(f"Page: {last_chunk_info['page']}")
-    print(f"Content:\n{last_chunk_info['content']}")
+    return last_chunk_info
 
 def hw02_2(q2_pdf):
     pass
