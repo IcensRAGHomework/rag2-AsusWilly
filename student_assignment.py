@@ -18,7 +18,7 @@ def hw02_2(q2_pdf):
     loader = PyPDFLoader(q2_pdf)
     documents = loader.load()
     full_text = '\f'.join([doc.page_content for doc in documents])
-    pattern = [r'第\s+[零一二三四五六七八九十]+\s+章', r'第\s[\d-]+\s+條']
+    pattern = [r'第\s+[一二三四五六七八九十]+\s+章', r'第\s[\d-]+\s+條']
     chunks = RecursiveCharacterTextSplitter(
         separators = pattern,
         chunk_overlap = 0,
